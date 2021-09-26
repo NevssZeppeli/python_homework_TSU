@@ -5,7 +5,7 @@ number = input("Введите число от 0 до 99: ").strip() #вводи
 result = ''
 
 #фильтр чисел, без массивов, решил использовать string.digits, если будет нельзя - то уже даже не знаю, как тут быть
-if (len(number) < 0 or len(number) > 3) or (number[0] not in digits) or (len(number) == 2 and number[1] not in digits):
+if (len(number) <= 0 or len(number) > 3) or (number[0] not in digits) or (len(number) == 2 and number[1] not in digits):
     print('Неправильный ввод. '
           'Запустите программу снова и введите число от 0 до 99')
     exit()
