@@ -10,8 +10,6 @@ while True:
         B = int(input("Введите число B: "))
         if gcd(A, B):
             print("Наибольший общий делитель чисел A и B:", gcd(A, B))
-        else:
-            print("Наибольший общий делитель не найден :(")
         exit(0)
     except (TypeError, ValueError) as e:
         print("Упс, что-то пошло не так, попробуйте снова ввести целые числа!")
