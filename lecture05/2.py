@@ -1,8 +1,8 @@
-import random
-
-cubes = []
+from itertools import combinations
 
 a = input("Введите строку формата NdM, где N - количество кубиков, а M - количество сторон каждого из них: ")
-cubes = [[x + 1 for x in range(int(a[2:]))] for _ in range(int(a[0]))]
-
-print(cubes)
+number = int(a[0])
+count = int(a[2:])
+cubes = [[x + 1 for x in range(count)] for _ in range(number)]
+cub = [x for y in cubes for x in y]
+print(cub)
