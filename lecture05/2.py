@@ -5,15 +5,15 @@ class d_exception(Exception): # тут я делаю робкую попытку
 
 while True:
     try:
-        k = input("Введите строку формата NdM, где N - количество кубиков, а M - количество сторон каждого из них: ")
-        if 'd' not in k:
-            raise d_exception()
-        number = int(k[0])
-        count = int(k[2:])
-        cubes = [[x + 1 for x in range(count)] for _ in range(number)]
+        key = input("Введите строку формата NdM, где N - количество кубиков, а M - количество сторон каждого из них: ")
+        if 'd' not in key:
+            raise d_exception("char 'd' is not in keyword")
+        N = int(key[0])
+        M = int(key[2:])
+        cubes = [[x + 1 for x in range(M)] for _ in range(N)]
         break
     except Exception as e:
-        print("Неправильный ввод, введите строку снова")
+        print("Неправильный ввод, введите строку снова. Ошибка:", e)
 
 
 s = [0]
