@@ -1,7 +1,19 @@
-k = input("Введите строку формата NdM, где N - количество кубиков, а M - количество сторон каждого из них: ")
-number = int(k[0])
-count = int(k[2:])
-cubes = [[x + 1 for x in range(count)] for _ in range(number)]
+class d_exception(Exception): # тут я делаю робкую попытку сделать свой эксепшн
+    def __init__(self, text):
+        self.txt = text
+
+
+while True:
+    try:
+        k = input("Введите строку формата NdM, где N - количество кубиков, а M - количество сторон каждого из них: ")
+        if 'd' not in k:
+            raise d_exception()
+        number = int(k[0])
+        count = int(k[2:])
+        cubes = [[x + 1 for x in range(count)] for _ in range(number)]
+        break
+    except Exception as e:
+        print("Неправильный ввод, введите строку снова")
 
 
 s = [0]
