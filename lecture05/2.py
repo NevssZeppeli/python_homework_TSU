@@ -18,8 +18,7 @@ while True:
 
 s = [0]
 for i in range(len(cubes)):
-    pair = ''.join(str(y) for y in cubes[i])
-    cmb = [int(a) + int(b) for a in s for b in pair]
+    cmb = [a + b for a in s for b in cubes[i]]
     s = [x for x in cmb]
 
 
