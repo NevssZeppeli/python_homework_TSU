@@ -1,4 +1,4 @@
-class d_exception(Exception): # тут я делаю робкую попытку сделать свой эксепшн
+class d_exception(Exception):  # тут я делаю робкую попытку сделать свой эксепшн
     def __init__(self, text):
         self.txt = text
 
