@@ -1,11 +1,12 @@
-import roman
+import roman # да, из интернета
 
 
 class Number:
     n = 0
+
     def __init__(self, numb):
         self.n = numb
-        #только такая идея была
+        # только такая идея была
         self.bin = bin(self.n)
         self.hex = hex(self.n)
         self.dec = self.n
